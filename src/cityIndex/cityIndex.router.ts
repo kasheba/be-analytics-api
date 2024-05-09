@@ -1,6 +1,6 @@
 import express, { type Request, type Response } from "express";
+import type { CityIndex } from "./cityIndex.interface";
 import * as CityIndexSvc from "./cityIndex.service";
-import type { CityIndex } from './cityIndex.interface';
 
 export const cityIndexRouter = express.Router();
 

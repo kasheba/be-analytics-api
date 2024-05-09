@@ -8,7 +8,7 @@
 		"dev": "ts-node-dev --respawn --pretty --transpile-only src/index.ts",
 		"tsc": "tsc",
 		"start": "node build/index.js",
-		"lint": "biome check --apply ."
+		"lint": "biome check --apply ./src"
 	},
 	"keywords": [],
 	"author": "Dheeraj Agrawal <agrawal.dheeraj.7@gmail.com>",
