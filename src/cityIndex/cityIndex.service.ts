@@ -11,13 +11,12 @@ import type { CityIndex } from "./cityIndex.interface";
 const cityIndexes: CityIndex[] = [
 	{
 		name: "Paris",
-		price: 100
+		price: 100,
 	},
 	{
 		name: "New York",
-		price: 110
-	}
-
+		price: 110,
+	},
 ];
 
 /**
@@ -25,8 +24,8 @@ const cityIndexes: CityIndex[] = [
  */
 
 export const findOne = async (name: string): Promise<CityIndex | undefined> => {
-	return cityIndexes.find(index => index.name === name);
-}
+	return cityIndexes.find((index) => index.name === name);
+};
 
 export const findAll = async (): Promise<CityIndex[]> => {
 	const response = [...cityIndexes];
