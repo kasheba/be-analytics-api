@@ -15,6 +15,7 @@ RUN cd /temp/dev && npm ci
 RUN mkdir -p /temp/prod
 COPY package.json package-lock.json /temp/prod/
 RUN cd /temp/prod && npm ci --omit=dev
+RUN cd /temp/prod && npx api install "@labs-v2/v0.4.0#17b0zbg1ilvzg903u" -y -l "ts" 
 
 FROM base as prerelease
 
@@ -31,6 +32,7 @@ ENV NODE_ENV=production
 USER node
 
 COPY --chown=node:node --from=install /temp/prod/node_modules node_modules
+COPY --chown=node:node --from=install /temp/prod/.api .api
 
 COPY --chown=node:node --from=prerelease /usr/src/app/build build
 COPY --chown=node:node --from=prerelease /usr/src/app/package.json .

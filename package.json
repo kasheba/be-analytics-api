@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "jest --coverage",
+		"test": "NODE_ENV=test PARCL_API_KEY=test jest --coverage",
 		"dev": "ts-node-dev --respawn --pretty --transpile-only src/index.ts",
 		"tsc": "tsc",
 		"start": "node build/index.js",
@@ -14,6 +14,7 @@
 	"author": "Dheeraj Agrawal <agrawal.dheeraj.7@gmail.com>",
 	"license": "ISC",
 	"dependencies": {
+		"@api/labs-v2": "file:.api/apis/labs-v2",
 		"@google-cloud/vision": "^4.2.1",
 		"axios": "^1.6.8",
 		"cors": "^2.8.5",
