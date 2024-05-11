@@ -4,20 +4,20 @@ import * as CityIndexSvc from "./cityIndex.service";
 
 export const cityIndexRouter = express.Router();
 
-cityIndexRouter.get("/", async (req: Request, res: Response) => {
+cityIndexRouter.get("/name/:name", async (req: Request, res: Response) => {
 	try {
-		const cityIndexes: CityIndex[] = await CityIndexSvc.findAll();
-		res.status(200).json(cityIndexes);
+		const name = req.params.name;
+		const cityIndex: CityIndex = await CityIndexSvc.findCityIndexByName(name);
+		res.status(200).json(cityIndex);
 	} catch (e) {
 		res.status(500).send(e);
 	}
 });
 
-cityIndexRouter.get("/:city", async (req: Request, res: Response) => {
-	const cityName: string = req.params.city;
-
+cityIndexRouter.get("/code/:code", async (req: Request, res: Response) => {
 	try {
-		const cityIndex: CityIndex | undefined = await CityIndexSvc.findOne(cityName);
+		const code: string = req.params.code;
+		const cityIndex: CityIndex | undefined = await CityIndexSvc.findCityIndexByCode(code);
 		if (cityIndex) {
 			res.status(200).json(cityIndex);
 		} else {

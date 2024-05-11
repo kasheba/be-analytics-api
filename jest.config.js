@@ -12,5 +12,6 @@ module.exports = {
 		".module.ts",
 		"<rootDir>/src/app/main.ts",
 		".mock.ts",
+		".api",
 	],
 };
