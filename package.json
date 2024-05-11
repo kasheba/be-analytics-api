@@ -14,14 +14,16 @@
 	"author": "Dheeraj Agrawal <agrawal.dheeraj.7@gmail.com>",
 	"license": "ISC",
 	"dependencies": {
-		"@api/labs-v2": "file:.api/apis/labs-v2",
 		"@google-cloud/vision": "^4.2.1",
+		"api": "^6.1.1",
 		"axios": "^1.6.8",
 		"cors": "^2.8.5",
 		"dotenv": "^16.4.5",
 		"express": "^4.19.2",
 		"helmet": "^7.1.0",
-		"morgan": "^1.10.0"
+		"json-schema-to-ts": "^2.8.0-beta.0",
+		"morgan": "^1.10.0",
+		"oas": "^20.10.3"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.7.2",

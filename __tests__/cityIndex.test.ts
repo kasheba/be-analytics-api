@@ -41,7 +41,6 @@ describe("Find city indexe", () => {
 		test("Should return city index for New York City", async () => {
 			mParclSvc.findHousingEventPriceByCityName.mockReturnValue(Promise.resolve([eventPrice]));
 			const res = await request(app).get("/api/city/name/New York City");
-			console.log(JSON.stringify(res));
 			expect(mParclSvc.findHousingEventPriceByCityName.mock.calls).toHaveLength(1);
 		});
 	});

@@ -1,5 +1,6 @@
-import sdk, { type SearchMarketsV1SearchMarketsGetMetadataParam } from "@api/labs-v2";
 import * as dotenv from "dotenv";
+import sdk from "./labs-v2";
+import type { SearchMarketsV1SearchMarketsGetMetadataParam } from "./labs-v2/types";
 import type { HousingEventPrice, Market } from "./parclApi.interface";
 
 dotenv.config();

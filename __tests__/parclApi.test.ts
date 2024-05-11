@@ -1,7 +1,5 @@
-import sdk from "@api/labs-v2";
+import sdk from "../src/parclApi/labs-v2";
 import * as ParclSvc from "../src/parclApi/parclApi.service";
-
-jest.mock("@api/labs-v2");
 
 describe("Search markets", () => {
 	describe("Find price feed by city name", () => {
