@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "96b2e3e1-b365-44f9-bda2-307ae17bfcfb",
-		"name": "Kasheba City Indexes API",
+		"name": "GeoMarkt City Indexes API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "11803789"
 	},
@@ -246,7 +246,7 @@
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": "https://kasheba-analytics-api-gl5bbi32cq-ts.a.run.app",
+			"value": "https://GeoMarkt-analytics-api-gl5bbi32cq-ts.a.run.app",
 			"type": "string"
 		}
 	]

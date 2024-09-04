@@ -47,4 +47,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: false
-          tags: Kasheba/be-analytics-api:latest
+          tags: GeoMarkt/be-analytics-api:latest
